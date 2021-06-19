@@ -4,4 +4,9 @@
 
 #include "PhoneBook.h"
 
-PhoneBook::
+PhoneBook::PhoneBook() {};
+
+Contact &PhoneBook::getContact(int index) {
+	return contacts[index % 8];
+}
+

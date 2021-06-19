@@ -2,14 +2,19 @@
 // Created by Jimmie Alease on 6/18/21.
 //
 
-#ifndef MODULE00_PHONEBOOK_H
-#define MODULE00_PHONEBOOK_H
+#ifndef PHONEBOOK_H
+#define PHONEBOOK_H
+#include "Contact.h"
+#include<iostream>
 
+using namespace std;
 
-class PhoneBook
-{
-
+class PhoneBook {
+protected:
+	Contact contacts[8];
+public:
+	PhoneBook();
+	Contact & getContact(int index = 0);
 };
 
-
-#endif //MODULE00_PHONEBOOK_H
+#endif
