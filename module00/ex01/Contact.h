@@ -23,6 +23,7 @@ protected:
 	string secret;
 public:
 	Contact();
+	bool empty;
 	void setFirstName(string fistName = "");
 	void setLastName(string lastName = "");
 	void setNickname(string nickName = "");
@@ -38,14 +39,14 @@ public:
 	string getFirstName();
 	string getLastName();
 	string getNickname();
-	string getLogin();
-	string getPostalAddress();
-	string getEmail();
-	string getPhone();
-	string getBirthday();
-	string getFavoriteMeal();
-	string getUnderwearColor();
-	string getSecret();
+//	string getLogin();
+//	string getPostalAddress();
+//	string getEmail();
+//	string getPhone();
+//	string getBirthday();
+//	string getFavoriteMeal();
+//	string getUnderwearColor();
+//	string getSecret();
 };
 
 #endif //MODULE00_CONTACT_H

@@ -5,7 +5,8 @@
 #include "Contact.h"
 
 Contact::Contact()
-: firstName(),
+: empty(true),
+  firstName(),
   lastName(),
   nickname(),
   login(),
@@ -18,8 +19,8 @@ Contact::Contact()
   secret()
 {}
 
-void Contact::setFirstName(string fistName) {
-	this->firstName = fistName;
+void Contact::setFirstName(string firstName) {
+	this->firstName = firstName;
 }
 
 void Contact::setLastName(string lastName) {
@@ -46,6 +47,10 @@ void Contact::setPhone(string phone) {
 	this->phone = phone;
 }
 
+void Contact::setBirthday(string birthday) {
+	this->birthday = birthday;
+}
+
 void Contact::setFavoriteMeal(string favoriteMeal) {
 	this->favoriteMeal = favoriteMeal;
 }
@@ -70,34 +75,34 @@ string Contact::getNickname() {
 	return this->nickname;
 }
 
-string Contact::getLogin() {
-	return this->login;
-}
-
-string Contact::getPostalAddress() {
-	return this->postalAddress;
-}
-
-string Contact::getEmail() {
-	return this->email;
-}
-
-string Contact::getPhone() {
-	return this->phone;
-}
-
-string Contact::getBirthday() {
-	return this->birthday;
-}
-
-string Contact::getFavoriteMeal() {
-	return this->favoriteMeal;
-}
-
-string Contact::getUnderwearColor() {
-	return this->underwearColor;
-}
-
-string Contact::getSecret() {
-	return this->secret;
-}
+//string Contact::getLogin() {
+//	return this->login;
+//}
+//
+//string Contact::getPostalAddress() {
+//	return this->postalAddress;
+//}
+//
+//string Contact::getEmail() {
+//	return this->email;
+//}
+//
+//string Contact::getPhone() {
+//	return this->phone;
+//}
+//
+//string Contact::getBirthday() {
+//	return this->birthday;
+//}
+//
+//string Contact::getFavoriteMeal() {
+//	return this->favoriteMeal;
+//}
+//
+//string Contact::getUnderwearColor() {
+//	return this->underwearColor;
+//}
+//
+//string Contact::getSecret() {
+//	return this->secret;
+//}
