@@ -5,48 +5,26 @@
 #ifndef MODULE00_CONTACT_H
 #define MODULE00_CONTACT_H
 #include<iostream>
+#include <array>
 
 using namespace std;
 
-class Contact {
-protected:
-	string firstName;
-	string lastName;
-	string nickname;
-	string login;
-	string postalAddress;
-	string email;
-	string phone;
-	string birthday;
-	string favoriteMeal;
-	string underwearColor;
-	string secret;
+class ContactFiled {
 public:
-	Contact();
-	bool empty;
-	void setFirstName(string fistName = "");
-	void setLastName(string lastName = "");
-	void setNickname(string nickName = "");
-	void setLogin(string login = "");
-	void setPostalAddress(string postalAddress = "");
-	void setEmail(string email = "");
-	void setPhone(string phone = "");
-	void setBirthday(string birthday = "");
-	void setFavoriteMeal(string favoriteMeal = "");
-	void setUnderwearColor(string underwearColor = "");
-	void setSecret(string secret = "");
-
-	string getFirstName();
-	string getLastName();
-	string getNickname();
-//	string getLogin();
-//	string getPostalAddress();
-//	string getEmail();
-//	string getPhone();
-//	string getBirthday();
-//	string getFavoriteMeal();
-//	string getUnderwearColor();
-//	string getSecret();
+	const string * fieldName;
+	string fieldValue;
 };
 
+class Contact {
+private:
+	ContactFiled contactFields[11];
+	bool fullfilled;
+public:
+	Contact();
+	const ContactFiled * getContactInfo();
+	void fillContact(string value = "");
+	bool isFullfilled();
+
+	static const string fieldNames[11];
+};
 #endif //MODULE00_CONTACT_H

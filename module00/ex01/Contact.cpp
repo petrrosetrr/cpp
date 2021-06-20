@@ -4,105 +4,38 @@
 
 #include "Contact.h"
 
-Contact::Contact()
-: empty(true),
-  firstName(),
-  lastName(),
-  nickname(),
-  login(),
-  postalAddress(),
-  email(),
-  phone(),
-  birthday(),
-  favoriteMeal(),
-  underwearColor(),
-  secret()
-{}
+const string Contact::fieldNames[11] = {
+		"first name",
+		"last name",
+		"nickname",
+		"login",
+		"postal address",
+		"email",
+		"phone",
+		"birthday",
+		"favorite meal",
+		"underwear color",
+		"darkest secret"
+};
 
-void Contact::setFirstName(string firstName) {
-	this->firstName = firstName;
+void Contact::fillContact(string value) {
+	static int fieldCounter = 0;
+	if (fieldCounter < 11) {
+		contactFields[fieldCounter].fieldName = &(fieldNames[fieldCounter]);
+		contactFields[fieldCounter].fieldValue = value;
+		fieldCounter++;
+	}
+	if (fieldCounter >= 11){
+		fullfilled = true;
+	}
 }
 
-void Contact::setLastName(string lastName) {
-	this->lastName = lastName;
+bool Contact::isFullfilled() {
+	return fullfilled;
 }
 
-void Contact::setNickname(string nickName) {
-	this->nickname = nickName;
+const ContactFiled *Contact::getContactInfo() {
+	return contactFields;
 }
 
-void Contact::setLogin(string login) {
-	this->login = login;
-}
-
-void Contact::setPostalAddress(string postalAddress) {
-	this->postalAddress = postalAddress;
-}
-
-void Contact::setEmail(string email) {
-	this->email = email;
-}
-
-void Contact::setPhone(string phone) {
-	this->phone = phone;
-}
-
-void Contact::setBirthday(string birthday) {
-	this->birthday = birthday;
-}
-
-void Contact::setFavoriteMeal(string favoriteMeal) {
-	this->favoriteMeal = favoriteMeal;
-}
-
-void Contact::setUnderwearColor(string underwearColor) {
-	this->underwearColor = underwearColor;
-}
-
-void Contact::setSecret(string secret) {
-	this->secret = secret;
-}
-
-string Contact::getFirstName() {
-	return this->firstName;
-}
-
-string Contact::getLastName() {
-	return this->lastName;
-}
-
-string Contact::getNickname() {
-	return this->nickname;
-}
-
-//string Contact::getLogin() {
-//	return this->login;
-//}
-//
-//string Contact::getPostalAddress() {
-//	return this->postalAddress;
-//}
-//
-//string Contact::getEmail() {
-//	return this->email;
-//}
-//
-//string Contact::getPhone() {
-//	return this->phone;
-//}
-//
-//string Contact::getBirthday() {
-//	return this->birthday;
-//}
-//
-//string Contact::getFavoriteMeal() {
-//	return this->favoriteMeal;
-//}
-//
-//string Contact::getUnderwearColor() {
-//	return this->underwearColor;
-//}
-//
-//string Contact::getSecret() {
-//	return this->secret;
-//}
+Contact::Contact() : fullfilled(false){}
