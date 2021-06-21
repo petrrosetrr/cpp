@@ -10,6 +10,8 @@ add_executable(ex01
         ex01/Contact.cpp
         ex01/Contact.h
         ex01/main.cpp
+        ex01/PhoneBookDrawer.cpp
+        ex01/PhoneBookDrawer.h
         ex01/PhoneBook.cpp
         ex01/PhoneBook.h)
 
