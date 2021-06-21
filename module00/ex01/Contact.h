@@ -19,6 +19,7 @@ class Contact {
 private:
 	ContactFiled contactFields[11];
 	bool fullfilled;
+	int fieldCounter;
 public:
 	Contact();
 	const ContactFiled * getContactInfo();

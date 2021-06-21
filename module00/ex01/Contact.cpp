@@ -19,7 +19,6 @@ const string Contact::fieldNames[11] = {
 };
 
 void Contact::fillContact(string value) {
-	static int fieldCounter = 0;
 	if (fieldCounter < 11) {
 		contactFields[fieldCounter].fieldName = &(fieldNames[fieldCounter]);
 		contactFields[fieldCounter].fieldValue = value;
@@ -38,4 +37,4 @@ const ContactFiled *Contact::getContactInfo() {
 	return contactFields;
 }
 
-Contact::Contact() : fullfilled(false){}
+Contact::Contact() : fullfilled(false), fieldCounter(0) {}

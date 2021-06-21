@@ -40,15 +40,14 @@ void PhoneBookDrawer::start() {
 					Contact & contact = phoneBook.getContact(i);
 					if (contact.isFullfilled()) {
 						const ContactFiled * fields = contact.getContactInfo();
+						cout << right << std::setw(10) << i << "|";
 						for (int j = 0; j < 3; j++) {
-							cout << right << std::setw(10) << i << "|";
 							string value = fields[j].fieldValue;
 							if (value.length() >= 10) {
 								cout << right << std::setw(10) << value.erase(9).append(".") << "|";
 							} else {
 								cout << right << std::setw(10) << value << "|";
 							}
-
 						}
 						cout << endl;
 					}
