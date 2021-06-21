@@ -42,7 +42,7 @@ void PhoneBookDrawer::start() {
 						const ContactFiled * fields = contact.getContactInfo();
 						for (int j = 0; j < 3; j++) {
 							cout << right << std::setw(10) << i << "|";
-							string value = fields[i].fieldValue;
+							string value = fields[j].fieldValue;
 							if (value.length() >= 10) {
 								cout << right << std::setw(10) << value.erase(9).append(".") << "|";
 							} else {
@@ -64,7 +64,7 @@ void PhoneBookDrawer::start() {
 				} else {
 					Contact & contact = phoneBook.getContact(stoi(index));
 					for(int i = 0; i < 11; i++) {
-						cout << contact.getContactInfo()[i].fieldName << ": ";
+						cout << *(contact.getContactInfo()[i].fieldName) << ": ";
 						cout << contact.getContactInfo()[i].fieldValue << endl;
 					}
 				}
