@@ -68,6 +68,8 @@ void PhoneBookDrawer::start() {
 						cout << contact.getContactInfo()[i].fieldValue << endl;
 					}
 				}
+			} else if (command == "EXIT") {
+				exit(0);
 			}
 		}
 	} catch (std::runtime_error & ex) {
