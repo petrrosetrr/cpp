@@ -28,12 +28,13 @@ void PhoneBookDrawer::start() {
 				string value;
 				Contact & contact = phoneBook.getContact(i++);
 				if (i >= 8) {
-					cout << "phone book is full, contact " << i % 8 << " will be overwritten";
-				}
-				for (int i = 0; i < 11; i++) {
-					cout << Contact::fieldNames[i] << ":" << endl;
-					value = this->readCin();
-					contact.fillContact(value);
+					cout << "phone book is full((" << endl;
+				} else {
+					for (int i = 0; i < 11; i++) {
+						cout << Contact::fieldNames[i] << ":" << endl;
+						value = this->readCin();
+						contact.fillContact(value);
+					}
 				}
 			} else if (command == "SEARCH") {
 				for(int i = 0; i < 8; i++) {
