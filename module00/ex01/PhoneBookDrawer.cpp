@@ -57,8 +57,9 @@ void PhoneBookDrawer::start() {
 				cout << "enter the index: " << endl;
 				index = this->readCin();
 
-				if (stoi(index) >= 8 || stoi(index) < 0
-					|| !(phoneBook.getContact(stoi(index)).isFullfilled())) {
+				if (index.find_first_not_of("0123456789") != std::string::npos
+				||  stoi(index) >= 8 || stoi(index) < 0
+				|| !(phoneBook.getContact(stoi(index)).isFullfilled())) {
 					cout << "invalid index" << endl;
 				} else {
 					Contact & contact = phoneBook.getContact(stoi(index));
