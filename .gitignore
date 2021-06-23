@@ -1,3 +1,5 @@
 *.o
 *.a
 .idea/
+.DS_Store
+cmake-build-debug
