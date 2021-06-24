@@ -37,3 +37,15 @@ add_executable(ex04
         ex04/main.cpp
         ex04/Sed.cpp
         ex04/Sed.h)
+
+include_directories(ex05)
+add_executable(ex05
+        ex05/main.cpp
+        ex05/Karen.cpp
+        ex05/Karen.h)
+
+include_directories(ex06)
+add_executable(ex06
+        ex06/main.cpp
+        ex06/Karen.cpp
+        ex06/Karen.h)
