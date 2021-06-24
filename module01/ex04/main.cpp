@@ -7,12 +7,13 @@
 int main(int ac, char **av) {
 	if (ac == 4) {
 		try {
-			Sed sed(std::string(av[1]), std::string(av[1]) + ".replace");
+			Sed sed(av[1], std::string(av[1]) + ".replace");
 			sed.replace(std::string(av[2]), std::string(av[3]));
 		} catch (std::runtime_error &ex) {
-			std::cout << " a " << std::endl;
+			std::cerr << ex.what() << std::endl;
+
 		}
 	} else {
-		std::cout << "Wrong number of arguments" << std::endl;
+		std::cerr << "Wrong number of arguments" << std::endl;
 	}
 }
