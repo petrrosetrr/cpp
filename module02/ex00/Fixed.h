@@ -4,7 +4,7 @@
 
 #ifndef CPP_FIXED_H
 #define CPP_FIXED_H
-
+#include <iostream>
 
 class Fixed {
 private:
@@ -16,6 +16,8 @@ public:
 	Fixed & operator= (const Fixed &fixed);
 	virtual ~Fixed();
 
+	int getRawBits() const;
+	void setRawBits(const int raw);
 };
 
 
