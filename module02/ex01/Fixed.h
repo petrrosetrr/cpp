@@ -15,8 +15,8 @@ public:
 	Fixed();
 	explicit Fixed(const int value);
 	explicit Fixed(const float value);
-	Fixed(const Fixed &fixed);
-	Fixed & operator= (const Fixed &fixed);
+	Fixed(const Fixed & fixed);
+	Fixed & operator= (const Fixed & fixed);
 	virtual ~Fixed();
 
 	int getRawBits() const;
