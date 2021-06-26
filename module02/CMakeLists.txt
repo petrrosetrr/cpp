@@ -14,3 +14,9 @@ add_executable(ex01
         ex01/Fixed.cpp
         ex01/Fixed.h
         ex01/main.cpp)
+
+include_directories(ex02)
+add_executable(ex02
+        ex02/Fixed.cpp
+        ex02/Fixed.h
+        ex02/main.cpp)
