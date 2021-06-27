@@ -5,5 +5,11 @@
 #include "ClapTrap.h"
 
 int main() {
+	ClapTrap clapTrap("clapClapTrap");
 
+	clapTrap.attack("someone");
+	clapTrap.beRepaired(5);
+	clapTrap.takeDamage(5);
+
+	ClapTrap(clapTrap).takeDamage(10);
 }
