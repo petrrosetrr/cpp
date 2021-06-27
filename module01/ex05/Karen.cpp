@@ -2,8 +2,6 @@
 // Created by petr on 24.06.2021.
 //
 
-#include <Karen.h>
-
 #include "Karen.h"
 
 Karen::Karen() {}

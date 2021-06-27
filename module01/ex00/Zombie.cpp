@@ -1,9 +1,6 @@
 //
 // Created by petr on 24.06.2021.
 //
-
-#include <Zombie.h>
-
 #include "Zombie.h"
 
 Zombie::Zombie(std::string name) : name(name){}

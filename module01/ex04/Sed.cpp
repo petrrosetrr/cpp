@@ -13,7 +13,8 @@ void Sed::replace(std::string s1, std::string s2) {
 	}
 
 	while((index = tmpBuffer.find(s1)) != std::string::npos) {
-		tmpBuffer.replace(index, s2.length(), s2);
+		tmpBuffer.erase(index, s1.length());
+		tmpBuffer.insert(index, s2);
 	}
 
 	output << tmpBuffer;
