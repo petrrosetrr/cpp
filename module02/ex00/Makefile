@@ -4,7 +4,7 @@ SRCS	:=	$(shell find . -name '*.cpp')
 
 HEAD	:=	$(shell find . -name '*.h')
 
-G++		= 	g++ -Wall -Wextra -Werror
+G++		= 	clang++ -Wall -Wextra -Werror
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -12,6 +12,9 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			$(G++) $(OBJS) -o $(NAME)
+
+.cpp.o:
+			$(G++) -c $< -o $(<:.cpp=.o)
 
 clean:
 			rm -rf $(OBJS)
