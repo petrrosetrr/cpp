@@ -12,6 +12,18 @@ private:
 	unsigned int hitPoints;
 	unsigned int energyPoints;
 	unsigned int attackDamage;
+protected:
+	ClapTrap(std::string name, unsigned int hitPoints,
+			unsigned int energyPoints, unsigned int attackDamage);
+	void setHitPoints(unsigned int hitPoints);
+	void setEnergyPoints(unsigned int energyPoints);
+	void setAttackDamage(unsigned int attackDamage);
+	unsigned int getHitPoints() const;
+	unsigned int getEnergyPoints() const;
+	unsigned int getAttackDamage() const;
+	const std::string & getName() const;
+	void setName(std::string name);
+
 public:
 	explicit ClapTrap(std::string name);
 	ClapTrap(const ClapTrap & clapTrap);

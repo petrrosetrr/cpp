@@ -3,3 +3,16 @@
 //
 
 #include "ScavTrap.h"
+
+ScavTrap::ScavTrap(std::string name) :
+ClapTrap(name, 100, 100, 30) {
+	std::cout << "ScavTrap: Default constructor called" << std::endl;
+}
+
+ScavTrap::~ScavTrap() {
+	std::cout << "ScavTrap: Destructor called" << std::endl;
+}
+
+void ScavTrap::guardGate() {
+	std::cout << "ScavTrap " << ClapTrap::getName() << " have entered in Gatekeeper mode" << std::endl;
+}
