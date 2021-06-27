@@ -1,4 +1,4 @@
-NAME	=	ex00
+NAME	=	ex01
 
 SRCS	:=	$(shell find . -name '*.cpp')
 
@@ -8,13 +8,13 @@ G++		= 	clang++ -Wall -Wextra -Werror
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-.cpp.o:
-			$(G++) -c $< -o $(<:.cpp=.o)
-
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			$(G++) $(OBJS) -o $(NAME)
+
+.cpp.o:
+			$(G++) -c $< -o $(<:.cpp=.o)
 
 clean:
 			rm -rf $(OBJS)
