@@ -4,10 +4,15 @@
 
 #ifndef MODULE03_FRAGTRAP_H
 #define MODULE03_FRAGTRAP_H
+#include <iostream>
+#include "ClapTrap.h"
 
+class FragTrap : public ClapTrap{
+public:
+	explicit FragTrap(std::string name);
 
-class FragTrap {
-
+	~FragTrap();
+	void highFivesGuys();
 };
 
 
