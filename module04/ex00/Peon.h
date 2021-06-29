@@ -4,9 +4,14 @@
 
 #ifndef MODULE03_PEON_H
 #define MODULE03_PEON_H
+#include <iostream>
+#include "Victim.h"
 
-class Peon {
-
+class Peon : public Victim {
+public:
+	explicit Peon(std::string name);
+	virtual ~Peon();
+	virtual void getPolymorphed() const;
 };
 
 

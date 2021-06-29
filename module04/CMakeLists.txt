@@ -11,4 +11,6 @@ add_executable(ex00
         ex00/Victim.h
         ex00/Peon.cpp
         ex00/Peon.h
+        ex00/SomeOtherDerivedClass.cpp
+        ex00/SomeOtherDerivedClass.h
         ex00/main.cpp)
