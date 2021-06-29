@@ -10,7 +10,7 @@
 class ScavTrap : public ClapTrap{
 public:
 	explicit ScavTrap(std::string name);
-
+	void attack(std::string const & target);
 	~ScavTrap();
 	void guardGate();
 };

@@ -22,5 +22,8 @@ int main() {
 //	std::cout << std::endl;
 
 	FragTrap trap("fragTrap");
+	std::cout << std::endl;
 	trap.highFivesGuys();
+	trap.attack("someone");
+	std::cout << std::endl;
 }

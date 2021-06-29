@@ -14,9 +14,12 @@ int main() {
 
 	ScavTrap scavTrap("sTrap");
 	std::cout << std::endl;
-	ScavTrap kek(scavTrap);
+
+	ScavTrap scavTrap1(scavTrap);
 	std::cout << std::endl;
-	kek.guardGate();
-	kek.attack("sTrap");
+
+	scavTrap1.attack("himself");
+	scavTrap1.guardGate();
+	scavTrap1.attack("sTrap");
 	std::cout << std::endl;
 }

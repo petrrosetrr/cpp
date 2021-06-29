@@ -13,8 +13,11 @@ private:
 	std::string name;
 public:
 	explicit DiamondTrap(std::string name);
+	DiamondTrap(const DiamondTrap &diamondTrap);
+	DiamondTrap & operator=(const DiamondTrap & diamondTrap);
+	using ScavTrap::attack;
 	void whoAmI();
+	~DiamondTrap();
 };
-
 
 #endif //MODULE03_DIAMONDTRAP_H

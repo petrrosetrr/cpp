@@ -6,10 +6,12 @@
 
 int main() {
 	ClapTrap clapTrap("clapClapTrap");
+	std::cout << std::endl;
 
 	clapTrap.attack("someone");
 	clapTrap.beRepaired(5);
 	clapTrap.takeDamage(5);
+	std::cout << std::endl;
 
 	ClapTrap(clapTrap).takeDamage(10);
 }

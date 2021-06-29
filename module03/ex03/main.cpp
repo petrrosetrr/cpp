@@ -26,6 +26,15 @@ int main() {
 //	trap.highFivesGuys();
 
 	DiamondTrap dTrap("TRAP");
+	std::cout << std::endl;
 
 	dTrap.whoAmI();
+	std::cout << std::endl;
+
+	DiamondTrap dTrap2(dTrap);
+	std::cout << std::endl;
+
+	dTrap2.attack("a");
+	dTrap2.attack("TRAP");
+	std::cout << std::endl;
 }

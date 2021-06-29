@@ -8,8 +8,6 @@
 #include "ClapTrap.h"
 
 class FragTrap : virtual public ClapTrap{
-protected:
-	FragTrap();
 public:
 	explicit FragTrap(std::string name);
 
