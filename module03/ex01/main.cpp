@@ -2,6 +2,7 @@
 // Created by petr on 27.06.2021.
 //
 #include <iostream>
+#include "ClapTrap.h"
 #include "ScavTrap.h"
 
 int main() {
