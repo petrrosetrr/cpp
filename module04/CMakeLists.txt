@@ -14,3 +14,21 @@ add_executable(ex00
         ex00/SomeOtherDerivedClass.cpp
         ex00/SomeOtherDerivedClass.h
         ex00/main.cpp)
+
+include_directories(ex01)
+add_executable(ex01
+        ex01/AWeapon.cpp
+        ex01/AWeapon.h
+        ex01/PlasmaRifle.h
+        ex01/PlasmaRifle.cpp
+        ex01/PowerFist.cpp
+        ex01/PowerFist.h
+        ex01/Enemy.cpp
+        ex01/Enemy.h
+        ex01/SuperMutant.cpp
+        ex01/SuperMutant.h
+        ex01/RadScorpion.cpp
+        ex01/RadScorpion.h
+        ex01/Character.cpp
+        ex01/Character.h
+        ex01/main.cpp)
