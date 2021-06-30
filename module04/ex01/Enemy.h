@@ -4,10 +4,21 @@
 
 #ifndef MODULE04_ENEMY_H
 #define MODULE04_ENEMY_H
+#include <iostream>
 
-
-class Enemy {
-
+class Enemy
+{
+protected:
+	std::string type;
+	int hitPoints;
+public:
+	Enemy(int hp, const std::string & type);
+	Enemy(const Enemy & enemy);
+	Enemy & operator=(const Enemy & enemy);
+	virtual ~Enemy();
+	const std::string & getType() const;
+	int getHP() const;
+	virtual void takeDamage(int damage);
 };
 
 

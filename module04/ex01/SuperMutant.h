@@ -4,10 +4,15 @@
 
 #ifndef MODULE04_SUPERMUTANT_H
 #define MODULE04_SUPERMUTANT_H
+#include <iostream>
+#include "Enemy.h"
 
-
-class SuperMutant {
-
+class SuperMutant : public Enemy{
+public:
+	SuperMutant();
+	SuperMutant(const SuperMutant & superMutant);
+	virtual ~SuperMutant();
+	virtual void takeDamage(int damage);
 };
 
 

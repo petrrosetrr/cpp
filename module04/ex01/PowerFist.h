@@ -4,10 +4,15 @@
 
 #ifndef MODULE04_POWERFIST_H
 #define MODULE04_POWERFIST_H
+#include <iostream>
+#include "AWeapon.h"
 
-
-class PowerFist {
-
+class PowerFist : public AWeapon{
+public:
+	PowerFist();
+	PowerFist(const PowerFist &powerFist);
+	virtual ~PowerFist();
+	virtual void attack() const;
 };
 
 
