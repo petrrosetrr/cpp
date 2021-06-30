@@ -4,10 +4,20 @@
 
 #ifndef MODULE04_ASSAULTTERMINATOR_H
 #define MODULE04_ASSAULTTERMINATOR_H
+#include <iostream>
+#include "ISpaceMarine.h"
 
+class AssaultTerminator : public ISpaceMarine{
+public:
+	AssaultTerminator();
+	virtual ~AssaultTerminator();
+	AssaultTerminator(const AssaultTerminator & assaultTerminator);
+	AssaultTerminator & operator=(const AssaultTerminator & assaultTerminator);
 
-class AssaultTerminator {
-
+	ISpaceMarine* clone() const;
+	void battleCry() const;
+	void rangedAttack() const;
+	void meleeAttack() const;
 };
 
 
