@@ -32,3 +32,15 @@ add_executable(ex01
         ex01/Character.cpp
         ex01/Character.h
         ex01/main.cpp)
+
+include_directories(ex02)
+add_executable(ex02
+        ex02/Squad.cpp
+        ex02/Squad.h
+        ex02/TacticalMarine.h
+        ex02/TacticalMarine.cpp
+        ex02/AssaultTerminator.cpp
+        ex02/AssaultTerminator.h
+        ex02/ISpaceMarine.h
+        ex02/ISquad.h
+        ex02/main.cpp)
