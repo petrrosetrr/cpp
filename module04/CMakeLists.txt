@@ -44,3 +44,19 @@ add_executable(ex02
         ex02/ISpaceMarine.h
         ex02/ISquad.h
         ex02/main.cpp)
+
+include_directories(ex03)
+add_executable(ex03
+        ex03/AMateria.cpp
+        ex03/AMateria.h
+        ex03/Character.cpp
+        ex03/Character.h
+        ex03/Cure.cpp
+        ex03/Cure.h
+        ex03/Ice.cpp
+        ex03/Ice.h
+        ex03/ICharacter.h
+        ex03/IMateriaSource.h
+        ex03/MateriaSource.cpp
+        ex03/MateriaSource.h
+        ex03/main.cpp)
