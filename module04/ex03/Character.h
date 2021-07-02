@@ -11,7 +11,7 @@
 class Character : public ICharacter {
 private:
 	std::string name;
-	AMateria *materia[4]{};
+	AMateria *materia[4];
 public:
 	explicit Character(std::string name);
 	~Character();
@@ -21,6 +21,7 @@ public:
 	const std::string & getName() const;
 	void equip(AMateria* m);
 	void unequip(int idx);
+	void use(int idx, ICharacter& target);
 };
 
 
