@@ -4,10 +4,15 @@
 
 #ifndef MODULE04_CURE_H
 #define MODULE04_CURE_H
+#include <iostream>
+#include "AMateria.h"
 
-
-class Cure {
-
+class Cure : public AMateria{
+public:
+	Cure();
+	~Cure();
+	Cure* clone() const;
+	void use(ICharacter & target);
 };
 
 

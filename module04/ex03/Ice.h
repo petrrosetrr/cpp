@@ -4,10 +4,15 @@
 
 #ifndef MODULE04_ICE_H
 #define MODULE04_ICE_H
+#include <iostream>
+#include "AMateria.h"
 
-
-class Ice {
-
+class Ice : public AMateria {
+public:
+	Ice();
+	~Ice();
+	Ice* clone() const;
+	void use(ICharacter & target);
 };
 
 
