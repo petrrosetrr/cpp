@@ -12,6 +12,7 @@ private:
 	int unitCounter;
 	ISpaceMarine **units;
 	void pushBack(ISpaceMarine * iSpaceMarine);
+	void deleteUnits();
 public:
 	Squad();
 	~Squad();

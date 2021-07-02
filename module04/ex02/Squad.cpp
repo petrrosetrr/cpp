@@ -1,8 +1,6 @@
 //
 // Created by Jimmie Alease on 6/30/21.
 //
-
-#include <algorithm>
 #include "Squad.h"
 
 Squad::Squad() : unitCounter(0), units(nullptr){}
@@ -14,7 +12,7 @@ Squad::Squad(const Squad &squad)
 
 Squad &Squad::operator=(const Squad &squad) {
 	if (this != &squad) {
-		delete[] this->units;
+		deleteUnits();
 		this->unitCounter = squad.unitCounter;
 		this->units = new ISpaceMarine * [this->unitCounter];
 		for(int i = 0; i < this->unitCounter; ++i) {
@@ -25,7 +23,7 @@ Squad &Squad::operator=(const Squad &squad) {
 }
 
 Squad::~Squad() {
-	delete[] units;
+	deleteUnits();
 }
 
 int Squad::getCount() const {
@@ -45,9 +43,9 @@ void Squad::pushBack(ISpaceMarine *iSpaceMarine) {
 		tmp[i] = this->units[i];
 	}
 	tmp[this->unitCounter] = iSpaceMarine;
-	this->unitCounter++;
-	delete[] this->units;
+	delete[] units;
 	this->units = tmp;
+	this->unitCounter++;
 }
 
 
@@ -61,4 +59,13 @@ int Squad::push(ISpaceMarine * iSpaceMarine) {
 		this->pushBack(iSpaceMarine);
 	}
 	return this->unitCounter;
+}
+
+void Squad::deleteUnits() {
+	if (this->units) {
+		for (int i = 0; i < unitCounter; ++i) {
+			delete this->units[i];
+		}
+		delete[] units;
+	}
 }
