@@ -19,7 +19,7 @@ Character & Character::operator=(const Character &character) {
 		this->name = character.name;
 		for(int i = 0; i < 4; ++i) {
 			delete materia[i];
-			materia[i] = character.materia[i];
+			materia[i] = (character.materia[i]) ? character.materia[i]->clone() : nullptr;
 		}
 	}
 	return *this;

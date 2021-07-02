@@ -10,6 +10,7 @@
 
 int main()
 {
+	delete new int;
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -22,13 +23,11 @@ int main()
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
-//	delete src;
 
-//	IMateriaSource * source = new MateriaSource(*(dynamic_cast<MateriaSource *>(src)));
 	IMateriaSource * source = new MateriaSource();
 	*dynamic_cast<MateriaSource *>(source) = *dynamic_cast<MateriaSource *>(src);
 	delete src;
-	ICharacter * testCharacter = new Character("test");
+	ICharacter * testCharacter = new Character(*dynamic_cast<Character *>(bob));
 	testCharacter->equip(source->createMateria("ice"));
 	testCharacter->use(0, *me);
 	testCharacter->equip(source->createMateria("cure"));
