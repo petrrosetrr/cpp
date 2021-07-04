@@ -30,3 +30,19 @@ add_executable(ex02
         ex02/Bureaucrat.cpp
         ex02/Bureaucrat.hpp
         ex02/main.cpp)
+
+include_directories(ex03)
+add_executable(ex03
+        ex03/Intern.cpp
+        ex03/Intern.hpp
+        ex03/PresidentialPardonForm.cpp
+        ex03/PresidentialPardonForm.hpp
+        ex03/RobotomyRequestForm.cpp
+        ex03/RobotomyRequestForm.hpp
+        ex03/ShrubberyCreationForm.cpp
+        ex03/ShrubberyCreationForm.hpp
+        ex03/Form.cpp
+        ex03/Form.hpp
+        ex03/Bureaucrat.cpp
+        ex03/Bureaucrat.hpp
+        ex03/main.cpp)
