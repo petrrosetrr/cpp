@@ -23,6 +23,7 @@ public:
 	void decGrade();
 
 	class GradeTooHighException : public std::exception {
+	public:
 		virtual const char* what() const throw();
 	};
 
@@ -30,7 +31,6 @@ public:
 	public:
 		virtual const char* what() const throw();
 	};
-	GradeTooHighException a;
 };
 
 std::ostream & operator<<(std::ostream & out, Bureaucrat & bureaucrat);
