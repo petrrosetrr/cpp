@@ -7,14 +7,10 @@
 #include <iostream>
 #include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 class Intern {
-private:
-	typedef struct	pair {
-		std::string	name;
-		Form		*form;
-	}				pair;
-	pair forms[3];
 public:
 	Intern();
 	virtual ~Intern();
