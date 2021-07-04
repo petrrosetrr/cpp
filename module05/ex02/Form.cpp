@@ -5,7 +5,7 @@
 #include "Form.hpp"
 
 Form::Form(std::string name, int gradeToSign, int gradeToExec) :
-name(name), gradeToSign(gradeToSign), gradeToExec(gradeToExec){
+name(name), gradeToSign(gradeToSign), gradeToExec(gradeToExec), isSigned(false) {
 	if (gradeToExec > 150 || gradeToSign > 150) {
 		throw GradeTooLowException();
 	} else if (gradeToExec < 1 || gradeToSign < 1) {
