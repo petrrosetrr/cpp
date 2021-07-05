@@ -2,7 +2,7 @@ NAME	=	ex03
 
 SRCS	:=	$(shell find . -name '*.cpp')
 
-HEAD	:=	$(shell find . -name '*.h')
+HEAD	:=	$(shell find . -name '*.hpp')
 
 G++		= 	clang++ -Wall -Wextra -Werror
 
