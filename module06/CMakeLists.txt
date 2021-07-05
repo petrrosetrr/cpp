@@ -14,3 +14,15 @@ add_executable(ex01
         ex01/Data.cpp
         ex01/Data.hpp
         ex01/main.cpp)
+
+include_directories(ex02)
+add_executable(ex02
+        ex02/Base.cpp
+        ex02/Base.hpp
+        ex02/A.cpp
+        ex02/A.hpp
+        ex02/B.cpp
+        ex02/B.hpp
+        ex02/C.cpp
+        ex02/C.hpp
+        ex02/main.cpp)
