@@ -27,14 +27,14 @@ public:
 			this->length = array.length;
 			delete[] this->array;
 			this->array = new T[length];
-			for (int i = 0; i < length; ++i) {
+			for (unsigned int i = 0; i < length; ++i) {
 				this->array[i] = array[i];
 			}
 		}
 		return *this;
 	}
 
-	T & operator[](unsigned int index) {
+	T & operator[](unsigned int index) const {
 		if (index < length) {
 			return array[index];
 		}
