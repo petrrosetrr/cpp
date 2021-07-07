@@ -24,7 +24,7 @@ public:
 
 	template<class Iterator>
 	void addNumber(Iterator start, Iterator end) {
-		while (std::distance(start, end) > 1) {
+		while (start < end) {
 			this->addNumber(*start);
 			++start;
 		}
