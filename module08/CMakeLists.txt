@@ -16,6 +16,6 @@ add_executable(ex01
 
 include_directories(ex02)
 add_executable(ex02
-        ex02/Mutantstack.cpp
-        ex02/Mutantstack.hpp
+        ex02/MutantStack.cpp
+        ex02/MutantStack.hpp
         ex02/main.cpp)
