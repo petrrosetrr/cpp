@@ -40,9 +40,9 @@ void Span::addNumber(unsigned int count, ...) {
 }
 
 int Span::shortestSpan() const {
-	if (storage.size() >=2) {
+	if (storage.size() >= 2) {
 		std::multiset<int>::iterator iterator1 = storage.begin();
-		std::multiset<int>::iterator iterator2 = storage.begin()++;
+		std::multiset<int>::iterator iterator2 = ++storage.begin();
 		int span = INT_MAX;
 		for(int i = 0; i < storage.size() - 1; ++i) {
 			if ((*iterator2 - *iterator1) < span) {
