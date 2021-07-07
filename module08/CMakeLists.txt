@@ -13,3 +13,9 @@ add_executable(ex01
         ex01/Span.cpp
         ex01/Span.hpp
         ex01/main.cpp)
+
+include_directories(ex02)
+add_executable(ex02
+        ex02/Mutantstack.cpp
+        ex02/Mutantstack.hpp
+        ex02/main.cpp)
