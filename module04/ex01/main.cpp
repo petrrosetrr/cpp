@@ -32,6 +32,6 @@ int main()
 	me->recoverAP();
 	me->recoverAP();
 	me->recoverAP();
-	std::cout << me;
+	std::cout << *me;
 	return 0;
 }
