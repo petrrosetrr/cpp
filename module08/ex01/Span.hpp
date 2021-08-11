@@ -24,7 +24,7 @@ public:
 
 	template<class Iterator>
 	void addNumber(Iterator start, Iterator end) {
-		while (start < end) {
+		while (start != end) {
 			this->addNumber(*start);
 			++start;
 		}
